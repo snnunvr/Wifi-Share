@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WiFi Share - Privacy Policy & Gizlilik Politikası">
+    <title>WiFi Share - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --secondary: #10B981;
+            --bg-dark: #0F172A;
+            --bg-light: #F8FAFC;
+            --text-dark: #1E293B;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .lang-toggle {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--primary);
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .language-section {
+            display: none;
+        }
+
+        .language-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        p,
+        li {
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            margin: 1.5rem 0;
+        }
+
+        .highlight strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .icon-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .icon-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .icon-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.1);
+        }
+
+        .icon-item h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .icon-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 WiFi Share</h1>
+            <p>Privacy Policy / Gizlilik Politikası</p>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="switchLang('tr')">🇹🇷 Türkçe</button>
+                <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Turkish Version -->
+            <div id="turkish" class="language-section active">
+                <p><strong>Son Güncelleme:</strong> 07 Ocak 2026</p>
+
+                <div class="highlight">
+                    <strong>🔒 Önemli:</strong> WiFi Share uygulaması hiçbir veriyi sunucularımıza göndermez.
+                    Tüm dosya transferleri doğrudan cihazınız ile diğer cihaz arasında Wi-Fi Direct üzerinden
+                    gerçekleşir.
+                </div>
+
+                <h2>📋 Toplanan Bilgiler</h2>
+
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <h4>📷 Kamera İzni</h4>
+                        <p>QR kod tarama için kullanılır. Hiçbir fotoğraf kaydedilmez.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>💾 Depolama İzni</h4>
+                        <p>Yalnızca seçtiğiniz dosyalara erişilir. Otomatik yükleme yoktur.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>📍 Konum İzni</h4>
+                        <p>Wi-Fi Direct için Android gereksinimi. Konum verisi toplanmaz.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>📡 Yakındaki Cihazlar</h4>
+                        <p>Dosya transferi için cihaz keşfi. Bilgi saklanmaz.</p>
+                    </div>
+                </div>
+
+                <h2>🔐 Veri Güvenliği</h2>
+                <ul>
+                    <li>✅ Tüm veriler cihazınızda kalır</li>
+                    <li>✅ Dosya transferi doğrudan cihazlar arasında yapılır</li>
+                    <li>✅ Hiçbir kullanıcı verisi toplanmaz</li>
+                    <li>✅ Hiçbir analitik veya takip sistemi yok</li>
+                    <li>✅ Üçüncü taraf paylaşımı yok</li>
+                </ul>
+
+                <h2>👶 Çocukların Gizliliği</h2>
+                <p>Uygulama, 13 yaşın altındaki çocuklardan bilerek veri toplamaz.</p>
+
+                <h2>📧 İletişim</h2>
+                <p>Sorularınız için: <a href="mailto:support@example.com"
+                        style="color: var(--primary);">support@example.com</a></p>
+            </div>
+
+            <!-- English Version -->
+            <div id="english" class="language-section">
+                <p><strong>Last Updated:</strong> January 7, 2026</p>
+
+                <div class="highlight">
+                    <strong>🔒 Important:</strong> WiFi Share app does not send any data to our servers.
+                    All file transfers occur directly between your device and other devices via Wi-Fi Direct.
+                </div>
+
+                <h2>📋 Information Collected</h2>
+
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <h4>📷 Camera Permission</h4>
+                        <p>Used for QR code scanning. No photos are recorded.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>💾 Storage Permission</h4>
+                        <p>Access only to files you select. No automatic uploads.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>📍 Location Permission</h4>
+                        <p>Android requirement for Wi-Fi Direct. Location data not collected.</p>
+                    </div>
+                    <div class="icon-item">
+                        <h4>📡 Nearby Devices</h4>
+                        <p>Device discovery for file transfer. No information stored.</p>
+                    </div>
+                </div>
+
+                <h2>🔐 Data Security</h2>
+                <ul>
+                    <li>✅ All data stays on your device</li>
+                    <li>✅ File transfer occurs directly between devices</li>
+                    <li>✅ No user data is collected</li>
+                    <li>✅ No analytics or tracking systems</li>
+                    <li>✅ No third-party sharing</li>
+                </ul>
+
+                <h2>👶 Children's Privacy</h2>
+                <p>The app does not knowingly collect data from children under 13 years of age.</p>
+
+                <h2>📧 Contact</h2>
+                <p>For questions: <a href="mailto:support@example.com"
+                        style="color: var(--primary);">support@example.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>WiFi Share</strong> - Premium P2P File Transfer</p>
+            <p>Developer: UNVER | Version: 1.0.0</p>
+            <p style="margin-top: 1rem; opacity: 0.6;">© 2026 All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all sections
+            document.querySelectorAll('.language-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected language
+            if (lang === 'tr') {
+                document.getElementById('turkish').classList.add('active');
+                document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            } else {
+                document.getElementById('english').classList.add('active');
+                document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
